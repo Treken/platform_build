@@ -195,9 +195,12 @@ def add_to_manifest(repositories, fallback_branch = None):
     f.write(raw_xml)
     f.close()
 
+import glob
+glob.glob("/path/to/root/*.dependencies")
+
 def fetch_dependencies(repo_path, fallback_branch = None):
     print('Looking for dependencies')
-    dependencies_path = repo_path + '/cm.dependencies'
+    dependencies_path = glob.glob(os.path.join(repo_path , '*.dependencies')
     syncable_repos = []
 
     if os.path.exists(dependencies_path):
