@@ -198,11 +198,9 @@ def add_to_manifest(repositories, fallback_branch = None):
         
 def fetch_dependencies(repo_path, fallback_branch = None):
     print('Looking for dependencies')
-    files = []
-    
-    for fetch_dependencies, filenames in os.walk(repo_path)
-        files.extend(glob.glob(repo_path + "/*.dependencies"))
-        syncable_repos = []
+    dep_file = "/??.dependencies"
+    dependencies_path = glob.glob(repo_path + dep_file)
+    syncable_repos = []
 
     if os.path.exists(dependencies_path):
         dependencies_file = open(dependencies_path, 'r')
