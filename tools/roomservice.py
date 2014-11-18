@@ -194,17 +194,11 @@ def add_to_manifest(repositories, fallback_branch = None):
     f = open('.repo/local_manifests/roomservice.xml', 'w')
     f.write(raw_xml)
     f.close()
-
-import glob
-glob.glob("device/*/*/*.dependencies")
-
+        
 def fetch_dependencies(repo_path, fallback_branch = None):
     print('Looking for dependencies')
-    dependencies_path = glob.glob(os.path.join(repo_path , '*.dependencies')
-    
-    for file_path in dependencies_path:
-        print file_path
-
+    dep_file = "/??.dependencies"
+    dependencies_path = repo_path + dep_file
     syncable_repos = []
 
     if os.path.exists(dependencies_path):
