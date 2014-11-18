@@ -201,11 +201,10 @@ glob.glob("device/*/*/*.dependencies")
 def fetch_dependencies(repo_path, fallback_branch = None):
     print('Looking for dependencies')
     dependencies_path = glob.glob(os.path.join(repo_path , '*.dependencies')
-    #dependencies_path is now a list of many individual file paths
-    #iterate over each file in the list
+    
     for file_path in dependencies_path:
         print file_path
-        #do something now that you have a single file path ...
+
     syncable_repos = []
 
     if os.path.exists(dependencies_path):
