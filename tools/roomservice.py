@@ -200,6 +200,8 @@ def fetch_dependencies(repo_path, fallback_branch = None):
     print('Looking for dependencies')
     dep_file = "/??.dependencies"
     dependencies_path = glob.glob(repo_path + dep_file)
+    for file_path in dependencies_path:
+        print file_path
     syncable_repos = []
 
     if os.path.exists(dependencies_path):
