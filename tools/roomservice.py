@@ -196,7 +196,10 @@ def add_to_manifest(repositories, fallback_branch = None):
     f.close()
 
 import glob
-glob.glob("/path/to/root/*.dependencies")
+glob.glob("device/*/*/*.dependencies")
+
+list('*.dependencies')
+['cm','to']
 
 def fetch_dependencies(repo_path, fallback_branch = None):
     print('Looking for dependencies')
