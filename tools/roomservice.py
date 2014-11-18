@@ -201,7 +201,7 @@ def fetch_dependencies(repo_path, fallback_branch = None):
     dep_file = "/??.dependencies"
     dependencies_path = glob.glob(repo_path + dep_file)
     for dep_file in dependencies_path:
-    syncable_repos = []
+      syncable_repos = []
 
     if os.path.exists(dependencies_path):
         dependencies_file = open(dependencies_path, 'r')
