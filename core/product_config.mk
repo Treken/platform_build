@@ -170,11 +170,6 @@ ifeq ($(WITH_HOST_DALVIK),)
 endif
 endif
 
-ifneq ($(TO_BUILD),)
-# Check for vendor props 
-vendor_props := $(shell vendor/to/device/*/$(TO_BUILD)/deps)
-endif
-
 # ---------------------------------------------------------------
 # Include the product definitions.
 # We need to do this to translate TARGET_PRODUCT into its
